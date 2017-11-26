@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="lisTOP.UsuarioView">
+  <ContentView.Content>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+            <StackLayout Orientation="Vertical" HorizontalOptions="End">
+                <Switch HorizontalOptions="Center" x:Name="switchUsuario" />
+            </StackLayout>
+            <StackLayout Orientation="Vertical" HorizontalOptions="End" VerticalOptions="Center">
+                <Label Text="" x:Name="labelUsuario" FontSize="20"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

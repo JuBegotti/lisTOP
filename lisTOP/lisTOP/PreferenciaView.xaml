@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="lisTOP.PreferenciaView"
+             NavigationPage.HasNavigationBar="True">
+  <ContentView.Content>
+        <StackLayout x:Name="item1" IsVisible="True">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                    <Label WidthRequest="200" Text="" x:Name="lblNomeRestricao"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" HorizontalOptions="End" VerticalOptions="Center">
+                    <Switch HorizontalOptions="Center" IsVisible="True" x:Name="switchRestricao"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

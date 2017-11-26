@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:lisTOP"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="lisTOP.Cadastro"
+             NavigationPage.HasNavigationBar="True">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="MenuItem1" Order="Primary" Text="Item 1" Priority="0"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Spacing="20">
+        
+            <Label Text="    Cadastro"  TextColor="White" FontSize="30" HorizontalTextAlignment="Start" BackgroundColor="Black"  HeightRequest="40" WidthRequest="500"/>
+
+            <StackLayout Spacing="20" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+
+
+                <StackLayout Spacing="0">
+                    <Entry x:Name="labelUsername" Placeholder="Informe o nome de usuário:" FontSize="20" TextColor="Black"/>
+                    <Label x:Name="erro" Text="" TextColor="Red" IsVisible="False"></Label>
+                </StackLayout>
+
+
+                <Label Text="Informe seu sexo:" x:Name="labelSexo"></Label>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                    <StackLayout Orientation="Vertical" HorizontalOptions="End">
+                        <Switch HorizontalOptions="End" IsToggled="True" VerticalOptions="Center" x:Name="switchMasculino" Toggled="MudancaSexo" />
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="End" VerticalOptions="Center">
+                        <Label Text="Masculino" x:Name="labelMasculino"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical" HorizontalOptions="End">
+                        <Switch HorizontalOptions="End" IsToggled="False" VerticalOptions="Center"  x:Name="switchFeminino" Toggled="MudancaSexo"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="End" VerticalOptions="Center">
+                        <Label Text="Feminino" x:Name="labelFeminino"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <Label Text="Informe sua faixa etaria:" x:Name="labelFaixaEtaria"/>
+                <StackLayout Spacing="0">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="Start">
+                            <Switch HorizontalOptions="End" IsToggled="True" VerticalOptions="Center" x:Name="switchCrianca" Toggled="MudancaIdade" />
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" HorizontalOptions="Start" VerticalOptions="Center">
+                            <Label Text="Criança" x:Name="labelCrianca"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="End">
+                            <Switch HorizontalOptions="End" IsToggled="False" VerticalOptions="Center" x:Name="switchAdolescente" Toggled="MudancaIdade" />
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" HorizontalOptions="End" VerticalOptions="Center">
+                            <Label Text="Adolescente" x:Name="labelAdolescente"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="End">
+                            <Switch HorizontalOptions="End" IsToggled="False" VerticalOptions="Center" x:Name="switchAdulto" Toggled="MudancaIdade" />
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" HorizontalOptions="End" VerticalOptions="Center">
+                            <Label Text="Adulto" x:Name="labelAdulto"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="End">
+                            <Switch HorizontalOptions="End" IsToggled="False" VerticalOptions="Center" x:Name="switchIdoso" Toggled="MudancaIdade" />
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" HorizontalOptions="End" VerticalOptions="Center">
+                            <Label Text="Idoso" x:Name="labelIdoso"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+
+                <Label Text="Pratica exercicio físico?" x:Name="labelExercicio"></Label>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                    <StackLayout Orientation="Vertical" HorizontalOptions="End">
+                        <Switch HorizontalOptions="End" IsToggled="True" VerticalOptions="Center" x:Name="switchExercicioSim" Toggled="MudancaExercicio" />
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="End" VerticalOptions="Center">
+                        <Label Text="Sim           " x:Name="labelExercicioSim"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="End">
+                        <Switch HorizontalOptions="End" IsToggled="False" VerticalOptions="Center"  x:Name="switchExercicioNao" Toggled="MudancaExercicio"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="End" VerticalOptions="Center">
+                        <Label Text="Não" x:Name="labelExercicioNao"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Start">
+                    <Label TextColor="Black" Text="Clique aqui para definir suas restrições alimentares.">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnButtonRestricoesCadastro"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+                <StackLayout HorizontalOptions="Start">
+                    <Label TextColor="Black" Text="Clique aqui para definir suas preferências alimentares.">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnButtonPreferenciasCadastro"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+
+                <StackLayout Spacing="0" Orientation="Horizontal" HorizontalOptions="Start">
+                    <StackLayout Orientation="Vertical" HorizontalOptions="End">
+                        <Button Image="voltar.png" Text="Voltar" Clicked="OnButtonVoltar" BackgroundColor="Black" TextColor="White" WidthRequest="150" HeightRequest="50"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="End">
+                        <Button Image="salvar.png" Text="Cadastrar" Clicked="OnButtonCadastrar" BackgroundColor="Black" TextColor="White" WidthRequest="150"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

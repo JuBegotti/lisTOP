@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="lisTOP.ListaConfirmacao"
+             NavigationPage.HasNavigationBar="True">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="40" VerticalOptions="Start" HorizontalOptions="Fill">
+                <Entry x:Name="entryNome" HorizontalTextAlignment="Center" Placeholder="Nome da Lista" FontSize="40" FontAttributes="Bold"/>
+
+                <StackLayout x:Name="containerLista" HorizontalOptions="Center">
+
+                </StackLayout>
+
+                <Button HorizontalOptions="CenterAndExpand" Image="adicionar.png" Text="Adicionar item" x:Name="buttonAdicionar" Clicked="OnButtonAdicionar" HeightRequest="50" WidthRequest="200" BackgroundColor="Black" TextColor="White"/>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <StackLayout Orientation="Vertical" HorizontalOptions="End" VerticalOptions="Center">
+                        <Button Image="voltar.png" Text="Voltar" x:Name="buttonVoltar" Clicked="OnButtonVoltar" BackgroundColor="Black" TextColor="White" HeightRequest="50"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="End">
+                        <Button Image="salvar.png" Text="Salvar" x:Name="buttonSalvar" Clicked="OnButtonSalvar" BackgroundColor="Black" TextColor="White" HeightRequest="50"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

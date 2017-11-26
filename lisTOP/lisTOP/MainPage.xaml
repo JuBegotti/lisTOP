@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:lisTOP"
+             x:Class="lisTOP.MainPage"
+             NavigationPage.HasNavigationBar="True">
+
+    <StackLayout Spacing="20"
+                 VerticalOptions="Center"
+                 HorizontalOptions="CenterAndExpand">
+        <Image
+                VerticalOptions="Center" HorizontalOptions="Center"  WidthRequest="300" HeightRequest="300"
+                Source="lisTOP.png" />
+        <StackLayout>
+            <Entry x:Name="entryUsername" Placeholder="Nome de Usuário" PlaceholderColor="Gray" />
+            <Label x:Name="erroUsername" Text="Nome de usuário inválido!" TextColor="Red" IsVisible="False"></Label>
+            <Entry x:Name="entryPassword" Placeholder="Senha" IsPassword="true"/>
+            <Label x:Name="erroPassword" Text="Senha errada!" TextColor="Red" IsVisible="False"></Label>
+        </StackLayout>
+        <StackLayout Spacing="0" VerticalOptions="Center" HorizontalOptions="Center">
+            <Button Text="Login" Clicked="OnButtonLogin" BackgroundColor="Black" TextColor="White"/>
+        </StackLayout>
+        <StackLayout HorizontalOptions="Center">
+            <Label TextColor="Black" Text="Para fazer um novo cadastro clique aqui.">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ButtonCadastro"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </StackLayout>
+
+
+</ContentPage>

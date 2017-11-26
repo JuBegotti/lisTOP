@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="lisTOP.SelecionarUsuarios">
+    <ContentPage.Content>
+        <StackLayout Spacing="20" VerticalOptions="Start" HorizontalOptions="Fill">
+
+            <Label Text="    Usuários"  TextColor="White" FontSize="30" HorizontalTextAlignment="Start" BackgroundColor="Black"  HeightRequest="40" WidthRequest="500"/>
+
+            <StackLayout Spacing="0">
+                <Label x:Name="labelTitulo" Text="Seleção de Usuários:" FontSize="30" HorizontalOptions="Center" TextColor="Black"/>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+
+                <StackLayout x:Name="containerUsuarios" HorizontalOptions="Center">
+
+                </StackLayout>
+
+                <Button Image="adicionar.png" Text="Adicionar usuários" HeightRequest="50" Clicked="OnButtonAddUsuario" BackgroundColor="Black" TextColor="White"/>
+
+                <Label x:Name="labelAdicionais" Text="Usuários Adicionais:" FontSize="30" HorizontalOptions="Start" TextColor="Black" />
+
+                <Entry x:Name="entryHomens" Placeholder="Número de Homens" Keyboard="Numeric"/>
+                <Entry x:Name="entryMulheres" Placeholder="Número de Mulheres" Keyboard="Numeric"/>
+
+                <Button x:Name="buttonVoltar" Image="salvar.png" Text="Salvar" Clicked="OnButtonVoltar" BackgroundColor="Black" TextColor="White" HeightRequest="50" WidthRequest="250"/>
+
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

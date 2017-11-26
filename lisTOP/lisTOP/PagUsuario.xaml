@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="lisTOP.PagUsuario">
+    <ContentPage.Content>
+        <StackLayout Spacing="20">
+
+            <Label Text="    Usuários"  TextColor="White" FontSize="30" HorizontalTextAlignment="Start" BackgroundColor="Black"  HeightRequest="40" WidthRequest="500"/>
+
+            <StackLayout x:Name="containerUsuarios" Spacing="10">
+            </StackLayout>
+
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                <Button Image="adicionar.png" HeightRequest="50" WidthRequest="200" Text="Adicionar usuário" x:Name="buttonNovoUsuario" Clicked="OnButtonAdicionarUsuario" 
+                    BackgroundColor="Black" TextColor="White" FontSize="15" />
+                <Button Image="voltar.png" Text="Voltar" Clicked="OnButtonVoltar" BackgroundColor="Black" TextColor="White" HeightRequest="50" WidthRequest="200"/>
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="lisTOP.ItemView"
+             NavigationPage.HasNavigationBar="True">
+  <ContentView.Content>
+        <StackLayout x:Name="item1" IsVisible="True">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                    <Picker WidthRequest="200" Title="Produto" SelectedIndexChanged="OnItemChange" x:Name="pickerProduto"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" HorizontalOptions="End">
+                    <Entry Placeholder="Qtd" x:Name="entryQtd" WidthRequest="50" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" HorizontalOptions="End" VerticalOptions="Center">
+                    <Label Text="Kg" x:Name="lblUnidade" WidthRequest="100" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" HorizontalOptions="End" VerticalOptions="Center">
+                    <Button x:Name="buttonRemove" Clicked="OnButtonRemoverCompra" Image="excluir.png" WidthRequest="40" HeightRequest="40" BackgroundColor="Black"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

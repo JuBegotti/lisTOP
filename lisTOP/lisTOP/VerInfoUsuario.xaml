@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="lisTOP.VerInfoUsuario">
+    <ContentPage.Content>
+        <StackLayout Spacing="20" >
+
+            <StackLayout Orientation="Horizontal" BackgroundColor="Black" HeightRequest="40" WidthRequest="500">
+                <Label Text="    Usuários"  TextColor="White" FontSize="30" HorizontalTextAlignment="Start"/>
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" BackgroundColor="#dddddd" HeightRequest="130" WidthRequest="330">
+                <Image Source="perfil.png" HeightRequest="100" WidthRequest="175"/>
+                <StackLayout Orientation="Vertical" HorizontalOptions="Start" HeightRequest="100" WidthRequest="175">
+                    <Label x:Name="VerUsuarioNome" Text="Nome do usuário" FontSize="30" TextColor="Black" Style="Bold"/>
+                    <Label x:Name="VerUsuarioSexo" Text="Sexo"/>
+                    <Label x:Name="VerUsuarioIdade" Text="Idade, "/>
+                    <Label x:Name="VerUsuarioAtleta" Text="Atleta"/>
+                </StackLayout>
+            </StackLayout>
+
+
+                <Label Text="        Restrições alimentares: " FontSize="15"/>
+                <StackLayout Orientation="Vertical" HorizontalOptions="Center" BackgroundColor="#dddddd" HeightRequest="50" WidthRequest="330">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Start">
+                        <Label Text="  " FontSize="15"/>
+                        <Label x:Name="VerAmendoim" Text="Amendoim. " FontSize="15" IsVisible="False"/>
+                        <Label x:Name="VerCarboidrato" Text="Caboidratos. " FontSize="15" IsVisible="False"/>
+                        <Label x:Name="VerGlutem" Text="Glutém. " FontSize="15" IsVisible="False"/>
+                        <Label x:Name="VerLactose" Text="Lactose. " FontSize="15" IsVisible="False"/>
+                        <Label x:Name="VerOvo" Text="Ovos. " FontSize="15" IsVisible="False"/>
+                        <Label x:Name="VerProteina" Text="Proteínas. " FontSize="15" IsVisible="False"/>
+                        <Label x:Name="VerSoja" Text="Soja. " FontSize="15" IsVisible="False"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Start">
+                        <Label Text="  " FontSize="15"/>
+                        <Label x:Name="VerVegano" Text="É vegano(a). " FontSize="15" IsVisible="False"/>
+                        <Label x:Name="VerVegetariano" Text="É vegetariano(a). " FontSize="15" IsVisible="False"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <Label Text="        Produtos consumidos: " FontSize="15"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" BackgroundColor="#dddddd" HeightRequest="230" WidthRequest="330" Spacing="0">
+                <StackLayout Orientation="Vertical" HorizontalOptions="End" VerticalOptions="Start">
+                    <Label x:Name="VerCereais" Text="  Cereais  " FontSize="15" IsVisible="False"/>
+                    <Label x:Name="VerEspeciarias" Text="  Especiarias  " FontSize="15" IsVisible="False"/>
+                    <Label x:Name="VerFrios" Text="  Frios  " FontSize="15" IsVisible="False"/>
+                    <Label x:Name="VerFrutas" Text="  Frutas  " FontSize="15" IsVisible="False"/>
+                    <Label x:Name="VerGraos" Text="  Grãos  " FontSize="15" IsVisible="False"/>
+                    <Label x:Name="VerHortalica" Text="  Hortaliças  " FontSize="15" IsVisible="False"/>
+                    <Label x:Name="VerLegumes" Text="  Legumes  " FontSize="15" IsVisible="False"/>
+                    <Label x:Name="VerMassas" Text="  Massas " FontSize="15" IsVisible="False"/>
+                    <Label x:Name="VerPaes" Text="  Pães " FontSize="15" IsVisible="False"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" HorizontalOptions="End" VerticalOptions="Start">
+                    <Label x:Name="VerAves" Text="  Aves " FontSize="15" IsVisible="False"/>
+                    <Label x:Name="VerCarneBovina" Text="  Carnes Bovinas  " FontSize="15" IsVisible="False"/>
+                    <Label x:Name="VerCarneSuina" Text="  Carnes Suínas  " FontSize="15" IsVisible="False"/>
+                    <Label x:Name="VerEmbutidos" Text="  Embutidos  " FontSize="15" IsVisible="False"/>
+                    <Label x:Name="VerFrutosDoMar" Text="  Frutos Do Mar  " FontSize="15" IsVisible="False"/>
+                    <Label x:Name="VerOvos" Text="  Ovos  " FontSize="15" IsVisible="False"/>
+                    <Label x:Name="VerPeixes" Text="  Peixes " FontSize="15" IsVisible="False"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" HorizontalOptions="End" VerticalOptions="Start">
+                    <Label x:Name="VerAchocolatado" Text="  Achocolatados  " FontSize="15" IsVisible="False"/>
+                    <Label x:Name="VerBolos" Text="  Bolos  " FontSize="15" IsVisible="False"/>
+                    <Label x:Name="VerCafe" Text="  Cafés  " FontSize="15" IsVisible="False"/>
+                    <Label x:Name="VerCereaisMatinais" Text="  Cereais Matinais  " FontSize="15" IsVisible="False"/>
+                    <Label x:Name="VerChas" Text="  Chás  " FontSize="15" IsVisible="False"/>
+                    <Label x:Name="VerGuloseimas" Text="  Guloseimas  " FontSize="15" IsVisible="False"/>
+                    <Label x:Name="VerIogurte" Text="  Iogurtes  " FontSize="15" IsVisible="False"/>
+                    <Label x:Name="VerLeite" Text="  Leites  " FontSize="15" IsVisible="False"/>
+                    <Label x:Name="VerSuco" Text="  Sucos " FontSize="15" IsVisible="False"/>
+                </StackLayout>
+            </StackLayout>
+            
+            <Button Image="voltar.png" Text="Voltar" Clicked="OnButtonVoltar" BackgroundColor="Black" TextColor="White" HeightRequest="50" WidthRequest="150" HorizontalOptions="Center"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

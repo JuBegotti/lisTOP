@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="lisTOP.Listas"
+             NavigationPage.HasNavigationBar="True">
+    <ContentPage.Content>
+        <StackLayout Spacing="20" VerticalOptions="Start" HorizontalOptions="Fill">
+
+            <Label Text="    Gerar Lista"  TextColor="White" FontSize="30" HorizontalTextAlignment="Start" BackgroundColor="Black"  HeightRequest="40" WidthRequest="500"/>
+
+            <StackLayout Spacing="0">
+                <Entry x:Name="entryNome" HorizontalTextAlignment="Center" Placeholder="Nome da Lista" FontSize="40" Keyboard="Text"/>
+                <Label x:Name="erroNomeLista" Text="" TextColor="Red" IsVisible="False" HorizontalOptions="Center"/>
+            </StackLayout>
+            
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+                <Picker  x:Name="pickerTipo" Title="Escolha o tipo de lista" SelectedIndexChanged="OnPickerIndexChange"/>
+                <Label x:Name="erroPicker" Text="" TextColor="Red" IsVisible="False"/>
+                
+                <Entry x:Name="entryPeriodo" Placeholder="Número de Semanas" Keyboard="Numeric" IsVisible="False"/>
+                <Label x:Name="erroNumSemanas" Text="" TextColor="Red" IsVisible="False"/>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                    <StackLayout Orientation="Vertical" HorizontalOptions="End">
+                        <Switch HorizontalOptions="End" VerticalOptions="Center" IsVisible="False" x:Name="switchCafe" />
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="End" VerticalOptions="Center">
+                        <Label Text="Café-da-manhã" x:Name="labelCafe" IsVisible="False"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                    <StackLayout Orientation="Vertical" HorizontalOptions="End">
+                        <Switch HorizontalOptions="Center" IsVisible="False" x:Name="switchAlmoco"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="End" VerticalOptions="Center">
+                        <Label Text="Almoço" x:Name="labelAlmoco" IsVisible="False"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                    <StackLayout Orientation="Vertical" HorizontalOptions="End">
+                        <Switch HorizontalOptions="Center" IsVisible="False" x:Name="switchJanta" />
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="End" VerticalOptions="Center">
+                        <Label Text="Jantar" x:Name="labelJanta" IsVisible="False"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <Button x:Name="buttonUsuarios" IsVisible="False" Text="Selecionar Usuários" Clicked="OnPickerUsuarioChange" BackgroundColor="Black" TextColor="White" HeightRequest="50"/> 
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                    <StackLayout Orientation="Vertical" HorizontalOptions="End" VerticalOptions="Center">
+                        <Button x:Name="buttonVoltar" Image="voltar.png" Text="Voltar" Clicked="OnButtonVoltar" BackgroundColor="Black" TextColor="White" HeightRequest="50"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="End">
+                        <Button x:Name="buttonProximo" Text="Próximo" Image="proximo.png" Clicked="OnButtonProximo" BackgroundColor="Black" TextColor="White" HeightRequest="50"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

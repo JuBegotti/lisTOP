@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="lisTOP.VerListas">
+    <ContentPage.Content>
+        <StackLayout Spacing="20">
+            <Label x:Name="appNamee" Text="lisTOP" BackgroundColor="Black" TextColor="White" FontSize="40" HorizontalOptions="CenterAndExpand" WidthRequest="500" HorizontalTextAlignment="Center"/>
+            <Image
+                VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="200" HeightRequest="200" Source="lisTOP.png" />
+
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                <Button Image="preferencias.png" HeightRequest="50" WidthRequest="200" Text="Editar Usuários" x:Name="EditarUsuarios" Clicked="OnButtonEditarUsuarios" 
+                    BackgroundColor="Black" TextColor="White" FontSize="15" />
+            </StackLayout>
+
+            <StackLayout x:Name="containerListas" Spacing="10">
+            </StackLayout>
+
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                <Button Image="adicionar.png" HeightRequest="50" WidthRequest="200" Text="Adicionar Lista" x:Name="buttonNovaLista" Clicked="OnButtonAdicionarLista" 
+                    BackgroundColor="Black" TextColor="White" FontSize="15" />
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
